@@ -25,3 +25,94 @@
    25  P@ssw0rd2026
    26  sudo shutdown
    27  history > ~/project_history.txt
+   28  head -20 ~/project_history.txt
+   29  exit
+   30  lsmod | grep vboxguest
+   31  ls -l /media/
+   32  wc -l ~/project_history.txt
+   33  ping -c 4 192.168.1.1 > ~/network_check.txt
+   34  ping -c 4 8.8.8.8
+   35  ping -c 4 8.8.8.8 >> ~/network_check.txt
+   36  cat ~/network_check.txt
+   37  journalctl -u nginx --since "5 minutes ago" > ~/nginx_recent_logs.txt
+   38  tail -20 ~/nginx_recent_logs.txt
+   39  systemctl status nginx
+   40  curl http://localhost
+   41  journalctl -u nginx --since "5 minutes ago" > ~/nginx_recent_logs.txt
+   42  tail -20 ~/nginx_recent_logs.txt
+   43  fdisk -l /dev/sdb
+   44  lsblk
+   45  sudo systemctl status nginx
+   46  cat /tmp/nginx_recent_logs.txt
+   47  sudo journalctl --since "5 minutes ago" > ~/nginx_recent_logs.txt
+   48  cat ~/nginx_recent_logs.txt
+   49  ls -lh /var/log/nginx/
+   50  exit
+   51  sudo admin
+   52  sudo poweroff
+   53  cat ~/nginx_recent_logs.txt
+   54  cat /etc/fstab
+   55  cp /etc/fstab ~/fstab.txt
+   56  grep sdb1 ~/fstab.txt
+   57  cat ~/fstab.txt
+   58  getenforce > ~/selinux_status.txt
+   59  cat ~/selinux_status.txt
+   60  ls -Zd /data/mephi-web > ~/file_contexts.txt
+   61  cat ~/file_contexts.txt
+   62  getcap /usr/sbin/tcpdump > ~/tcpdump_capabilities.txt
+   63  cat ~/tcpdump_capabilities.txt
+   64  stat /data/mephi-web > ~/permissions.txt
+   65  cat ~/permissions.txt
+   66  id mephi-admin > ~/users_groups.txt
+   67  getent group mephi-devs >> ~/users_groups.txt
+   68  cat ~/users_groups.txt
+   69  curl -s http://192.168.1.100 > ~/curl_output.txt
+   70  cat ~/curl_output.txt
+   71  getenforce > ~/selinux_status.txt
+   72  cat ~/selinux_status.txt
+   73  wget -qO- http://192.168.1.100
+   74  curl http://192.168.1.100
+   75  ls -lh ~/project_history.txt        ~/network_check.txt        ~/nginx_recent_logs.txt        ~/fstab.txt        ~/selinux_status.txt        ~/file_contexts.txt        ~/tcpdump_capabilities.txt        ~/permissions.txt        ~/users_groups.txt        ~/curl_output.txt        ~/mephi-nginx-screenshot.png
+   76  lsblk
+   77  sudo mkdir -p /mnt/sdc1
+   78  sudo mount /dev/sdc1 /mnt/sdc1
+   79  sudo mkdir -p /mnt/sdc1
+   80  sudo cp /home/admin/*.txt /mnt/sdc1/
+   81  ls -lh /mnt/sdc1/
+   82  sudo umount /dev/sdc1
+   83  sudo mkfs.vfat -F 32 /dev/sdc1
+   84  sudo cp /home/admin/*.txt /mnt/sdc1/
+   85  sudo umount /dev/sdc1
+   86  lsblk
+   87  sudo mkfs.vfat -F 32 /dev/sdc1
+   88  sudo mount /dev/sdX1 /mnt/usb
+   89  sudo mount /dev/sdc1 /mnt/usb
+   90  lsblk
+   91  sudo mkfs.vfat -F 32 /dev/sdc1
+   92  sudo mount /dev/sdc1 /mnt/usb
+   93  sudo mkdir -p /mnt/usb
+   94  sudo mount /dev/sdc1 /mnt/usb
+   95  sudo cp /home/admin/*.txt /mnt/usb/
+   96  ls -lh /mnt/usb/
+   97  sudo umount /dev/sdc1
+   98  sudo cp /data/mephi-web/index.html ~/index.html
+   99  ls -lh /tmp/tcpdump*.rpm
+  100  cat ~/tcpdump_capabilities.txt
+  101  getcap /usr/sbin/tcpdump > ~/tcpdump_capabilities.txt
+  102  cat ~/tcpdump_capabilities.txt
+  103  dnf download --downloaddir=/tmp tcpdump
+  104  ls -lh /tmp/tcpdump*.rpm
+  105  cp /tmp/tcpdump*.rpm ~/tcpdump.rpm
+  106  cp /tmp/tcpdump*.rpm ~/
+  107  ls -lh ~/tcpdump.rpm
+  108  ls -lh ~/tcpdump*.rpm
+  109  sudo mkdir -p /mnt/usb
+  110  sudo mount /dev/sdc1 /mnt/usb
+  111  sudo cp /home/admin/ index.html \tcpdump*.rpm /mnt/usb/
+  112  sudo cp project_history.txt network_check.txt nginx_recent_logs.txt fstab.txt selinux_status.txt file_contexts.txt tcpdump_capabilities.txt permissions.txt users_groups.txt index.html curl_output.txt tcpdump.rpm /mnt/usb/
+  113  sudo cp project_history.txt network_check.txt nginx_recent_logs.txt fstab.txt selinux_status.txt file_contexts.txt tcpdump_capabilities.txt permissions.txt users_groups.txt index.html curl_output.txt tcpdump*.rpm /mnt/usb/
+  114  ls -lh /mnt/usb/
+  115  cd ~
+  116  git init
+  117  stat /data/mephi-web > ~/permissions.txt
+  118  history > ~/project_history.txt

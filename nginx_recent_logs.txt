@@ -1,7 +1,9 @@
-апр 13 17:38:47 mephi-2026.domain.local audit[990]: USER_AUTH pid=990 uid=1001 auid=1001 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:authentication grantors=pam_unix acct="admin" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
-апр 13 17:38:47 mephi-2026.domain.local audit[990]: USER_ACCT pid=990 uid=1001 auid=1001 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:accounting grantors=pam_unix acct="admin" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
-апр 13 17:38:47 mephi-2026.domain.local audit[990]: USER_CMD pid=990 uid=1001 auid=1001 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/home/admin" cmd=6A6F75726E616C63746C202D2D73696E63652035206D696E757465732061676F exe="/usr/bin/sudo" terminal=pts/0 res=success'
-апр 13 17:38:47 mephi-2026.domain.local audit[990]: CRED_REFR pid=990 uid=1001 auid=1001 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
-апр 13 17:38:47 mephi-2026.domain.local audit[990]: USER_START pid=990 uid=1001 auid=1001 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
-апр 13 17:38:47 mephi-2026.domain.local sudo[990]:    admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/journalctl --since '5 minutes ago'
-апр 13 17:38:47 mephi-2026.domain.local sudo[990]: pam_unix(sudo:session): session opened for user root(uid=0) by admin(uid=1001)
+апр 14 01:43:42 mephi-2026.domain.local systemd[1]: Stopping nginx.service - The nginx HTTP and reverse proxy server...
+апр 14 01:43:42 mephi-2026.domain.local systemd[1]: nginx.service: Deactivated successfully.
+апр 14 01:43:42 mephi-2026.domain.local systemd[1]: Stopped nginx.service - The nginx HTTP and reverse proxy server.
+апр 14 01:43:42 mephi-2026.domain.local systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...
+апр 14 01:43:42 mephi-2026.domain.local nginx[1013]: nginx: [warn] conflicting server name "_" on 0.0.0.0:80, ignored
+апр 14 01:43:42 mephi-2026.domain.local nginx[1013]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+апр 14 01:43:42 mephi-2026.domain.local nginx[1013]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+апр 14 01:43:42 mephi-2026.domain.local nginx[1014]: nginx: [warn] conflicting server name "_" on 0.0.0.0:80, ignored
+апр 14 01:43:42 mephi-2026.domain.local systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.
