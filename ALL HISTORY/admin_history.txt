@@ -1,0 +1,114 @@
+ls -l /data/mephi-web/
+cat /data/mephi-web/index.html
+cat /etc/nginx/conf.d/default.conf
+grep -A 5 "server {" /etc/nginx/nginx.conf
+systemctl status nginx
+sudo ss -tlnp | grep :80
+ls -l /data/mephi-web/index.html
+ls -Z /data/mephi-web/index.html
+grep -A 5 "server {" /etc/nginx/nginx.conf
+cat /etc/nginx/conf.d/default.conf
+ls -l /data/mephi-web/
+cat /data/mephi-web/index.html
+grep "root" /etc/nginx/nginx.conf | head -3
+sudo nano /etc/nginx/nginx.conf
+sudo nginx -t
+sudo systemctl restart nginx
+curl http://localhost
+ls -Z /data/mephi-web/index.html
+grep "root" /etc/nginx/nginx.conf
+sudo nano /etc/nginx/nginx.conf
+sudo nano /etc/nginx/conf.d/mephi-site.conf
+sudo systemctl restart nginx
+sudo systemctl status nginx
+curl http://localhost
+P@ssw0rd2026
+sudo shutdown
+history > ~/project_history.txt
+head -20 ~/project_history.txt
+exit
+lsmod | grep vboxguest
+ls -l /media/
+wc -l ~/project_history.txt
+ping -c 4 192.168.1.1 > ~/network_check.txt
+ping -c 4 8.8.8.8
+ping -c 4 8.8.8.8 >> ~/network_check.txt
+cat ~/network_check.txt
+journalctl -u nginx --since "5 minutes ago" > ~/nginx_recent_logs.txt
+tail -20 ~/nginx_recent_logs.txt
+systemctl status nginx
+curl http://localhost
+journalctl -u nginx --since "5 minutes ago" > ~/nginx_recent_logs.txt
+tail -20 ~/nginx_recent_logs.txt
+fdisk -l /dev/sdb
+lsblk
+sudo systemctl status nginx
+cat /tmp/nginx_recent_logs.txt
+sudo journalctl --since "5 minutes ago" > ~/nginx_recent_logs.txt
+cat ~/nginx_recent_logs.txt
+ls -lh /var/log/nginx/
+exit
+sudo admin
+sudo poweroff
+cat ~/nginx_recent_logs.txt
+cat /etc/fstab
+cp /etc/fstab ~/fstab.txt
+grep sdb1 ~/fstab.txt
+cat ~/fstab.txt
+getenforce > ~/selinux_status.txt
+cat ~/selinux_status.txt
+ls -Zd /data/mephi-web > ~/file_contexts.txt
+cat ~/file_contexts.txt
+getcap /usr/sbin/tcpdump > ~/tcpdump_capabilities.txt
+cat ~/tcpdump_capabilities.txt
+stat /data/mephi-web > ~/permissions.txt
+cat ~/permissions.txt
+id mephi-admin > ~/users_groups.txt
+getent group mephi-devs >> ~/users_groups.txt
+cat ~/users_groups.txt
+curl -s http://192.168.1.100 > ~/curl_output.txt
+cat ~/curl_output.txt
+getenforce > ~/selinux_status.txt
+cat ~/selinux_status.txt
+wget -qO- http://192.168.1.100
+curl http://192.168.1.100
+ls -lh ~/project_history.txt        ~/network_check.txt        ~/nginx_recent_logs.txt        ~/fstab.txt        ~/selinux_status.txt        ~/file_contexts.txt        ~/tcpdump_capabilities.txt        ~/permissions.txt        ~/users_groups.txt        ~/curl_output.txt        ~/mephi-nginx-screenshot.png
+lsblk
+sudo mkdir -p /mnt/sdc1
+sudo mount /dev/sdc1 /mnt/sdc1
+sudo mkdir -p /mnt/sdc1
+sudo cp /home/admin/*.txt /mnt/sdc1/
+ls -lh /mnt/sdc1/
+sudo umount /dev/sdc1
+sudo mkfs.vfat -F 32 /dev/sdc1
+sudo cp /home/admin/*.txt /mnt/sdc1/
+sudo umount /dev/sdc1
+lsblk
+sudo mkfs.vfat -F 32 /dev/sdc1
+sudo mount /dev/sdX1 /mnt/usb
+sudo mount /dev/sdc1 /mnt/usb
+lsblk
+sudo mkfs.vfat -F 32 /dev/sdc1
+sudo mount /dev/sdc1 /mnt/usb
+sudo mkdir -p /mnt/usb
+sudo mount /dev/sdc1 /mnt/usb
+sudo cp /home/admin/*.txt /mnt/usb/
+ls -lh /mnt/usb/
+sudo umount /dev/sdc1
+sudo cp /data/mephi-web/index.html ~/index.html
+ls -lh /tmp/tcpdump*.rpm
+cat ~/tcpdump_capabilities.txt
+getcap /usr/sbin/tcpdump > ~/tcpdump_capabilities.txt
+cat ~/tcpdump_capabilities.txt
+dnf download --downloaddir=/tmp tcpdump
+ls -lh /tmp/tcpdump*.rpm
+cp /tmp/tcpdump*.rpm ~/tcpdump.rpm
+cp /tmp/tcpdump*.rpm ~/
+ls -lh ~/tcpdump.rpm
+ls -lh ~/tcpdump*.rpm
+sudo mkdir -p /mnt/usb
+sudo mount /dev/sdc1 /mnt/usb
+sudo cp /home/admin/ index.html \tcpdump*.rpm /mnt/usb/
+sudo cp project_history.txt network_check.txt nginx_recent_logs.txt fstab.txt selinux_status.txt file_contexts.txt tcpdump_capabilities.txt permissions.txt users_groups.txt index.html curl_output.txt tcpdump.rpm /mnt/usb/
+sudo cp project_history.txt network_check.txt nginx_recent_logs.txt fstab.txt selinux_status.txt file_contexts.txt tcpdump_capabilities.txt permissions.txt users_groups.txt index.html curl_output.txt tcpdump*.rpm /mnt/usb/
+ls -lh /mnt/usb/

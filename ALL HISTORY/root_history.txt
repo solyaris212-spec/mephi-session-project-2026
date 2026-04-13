@@ -1,0 +1,138 @@
+ip link show
+sudo nmcli connection modify enp0s3 ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns "8.8.8.8" ipv4.dns-search "domain.local"
+sudo nmcli connection up enp0s3
+ip addr show enp0s3
+ip route show
+cat /etc/resolv.conf
+ping -c 3 192.168.1.1
+ping -c 3 8.8.8.8
+sudo hostnamectl set-hostname mephi-2026.domain.local
+hostnamectl
+nmcli connection show enp0s3 | grep -E "ipv4.(method|addresses|gateway|dns)"
+ls -la /etc/NetworkManager/system-connections/
+sudo reboot
+systemctl status sshd
+ip addr show
+ip route show
+ping -c 4 8.8.8.8
+ping -c 4 192.168.1.1
+sudo nmcli connection modify enp0s3 ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns "8.8.8.8" ipv4.never-default yes
+sudo nmcli connection up enp0s3
+sudo hostnamectl set-hostname mephi-2026.domain.local
+sudo nmcli connection modify enp0s8 ipv4.method auto ipv4.never-default no
+sudo nmcli connection up enp0s8
+ping -c 3 192.168.1.1
+ping -c 3 8.8.8.8
+sudo reboot
+ping -c 3 8.8.8.8
+ping -c 3 192.168.1.1
+hostnamectl
+ping -c 4 8.8.8.8 > /tmp/network_check.txt
+ping -c 4 192.168.1.1 >> /tmp/network_check.txt
+cat /tmp/network_check.txt
+sudo dnf makecache
+sudo dnf install -y nginx
+sudo dnf install -y tcpdump
+sudo dnf install -y libcap-ng-utils
+nginx -v
+tcpdump --version
+getcap --help
+getcap -help
+dnf download --downloaddir=/tmp tcpdump
+ls -lh /tmp/tcpdump*.rpm
+sudo rpm -ivh /tmp/tcpdump*.rpm
+sudo dnf install /tmp/tcpdump*.rpm
+rpm -qa | grep tcpdump
+dnf list installed nginx tcpdump libcap-ng-utils
+rpm -qa | grep tcpdump
+which nginx tcpdump getcap setcap
+sudo shotdown
+sudo shutdown
+fdisk -l /dev/sdb
+lsblk
+sudo fdisk /dev/sdb
+lsblk
+sudo mkfs.ext4 -L MEPHI_DATA /dev/sdb1
+sudo mkdir -p /data/mephi-web
+sudo blkid /dev/sdb1
+sudo nano /etc/fstab
+sudo mount /data/mephi-web
+sudo mount -a
+df -h /data/mephi-web
+mount | grep mephi-web
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo systemctl status nginx
+cat /etc/fstab | grep sdb1
+cat /etc/fstab
+sudo journalctl -u nginx --since "5 minutes ago" > /tmp/nginx_recent_logs.txt
+cat /tmp/nginx_recent_logs.txt
+sudo reboot
+lsblk
+sudo systemctl status nginx
+sudo journalctl -u nginx --since "5 minutes ago" > /tmp/nginx_recent_logs.txt
+cat /tmp/nginx_recent_logs.txt
+sudo shutdown
+ip addr show
+sudo shutdown
+sudo groupadd mephi-devs
+sudo useradd -m -G mephi-devs mephi-admin
+echo "mephi-admin:P@ssw0rd2026" | sudo chpasswd
+sudo chown -R mephi-admin:mephi-devs /data/mephi-web
+sudo chmod 2775 /data/mephi-web
+ls -ld /data/mephi-web
+id mephi-admin
+groups mephi-admin
+sestatus
+sudo shutdown
+sestatus
+sudo chcon -R -t httpd_sys_content_t /data/mephi-web
+sudo semanage fcontext -a -t httpd_sys_content_t "/data/mephi-web(/.*)?"
+ls -Z /data/mephi-web
+sudo dnf install policycoreutils-python-utils
+sudo semanage fcontext -a -t httpd_sys_content_t "/data/mephi-web(/.*)?"
+sudo restorecon -R -v /data/mephi-web
+ls -Z /data/mephi-web
+ls -ldZ /data/mephi-web
+semanage fcontext -l | grep /data/mephi-web
+ls -lZR /data/mephi-web
+ps -ef | grep nginx
+namei -l /data/mephi-web
+ls -l /data/mephi-web
+getcap /usr/sbin/tcpdump
+ls -l /usr/sbin/tcpdump
+sudo chmod u-s /usr/sbin/tcpdump
+sudo setcap cap_net_raw,cap_net_admin+ep /usr/sbin/tcpdump
+getcap /usr/sbin/tcpdump
+sudo -u mephi-admin tcpdump --help
+sudo -u nginx curl -I http://localhost
+sudo shutdown
+sudo nano /etc/ssh/denied_users
+sudo chmod 644 /etc/ssh/denied_users
+sudo chown root:root /etc/ssh/denied_users
+sudo nano /etc/pam.d/sshd
+sudo nano /etc/pam.d/login
+sudo nano /etc/pam.d/system-auth
+sudo nano /etc/ssh/sshd_config
+cat /etc/pam.d/system-auth
+cat /etc/pam.d/login
+cat /etc/pam.d/sshd
+cat /etc/ssh/denied_users 
+ls -l /etc/ssh/denied_users
+cat /etc/ssh/sshd_config
+grep pam_listfile /etc/pam.d/sshd
+sudo systemctl restart sshd
+sudo useradd -m admin
+sudo usermod -aG wheel admin
+sudo passwd admin
+su - admin -c "sudo ls -la /root"
+grep wheel /etc/sudoers
+su - mephi-admin
+ls -l /data/mephi-web/
+cat /data/mephi-web/index.html
+ls -ld /data/mephi-web/
+su - mephi-admin
+
+curl http://localhost
+учше
+exit
