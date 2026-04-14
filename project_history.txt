@@ -95,10 +95,12 @@ cat /etc/ssh/sshd_config
 grep pam_listfile /etc/pam.d/sshd
 sudo systemctl restart sshd
 su - mephi-admin
+echo "Hello from Student: 255800" > /data/mephi-web/index.html
+cat /data/mephi-web/index.html
+df -h /data/mephi-web
 ls -l /data/mephi-web/
 cat /data/mephi-web/index.html
 ls -ld /data/mephi-web/
-su - mephi-admin
 curl http://localhost
 ls -l /data/mephi-web/
 cat /data/mephi-web/index.html
