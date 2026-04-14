@@ -11,10 +11,11 @@ ping -c 4 192.168.1.1 >> /tmp/network_check.txt
 cat /tmp/network_check.txt
 sudo dnf makecache
 sudo dnf install -y nginx
+sudo dnf install -y tcpdump
 sudo dnf install -y libcap-ng-utils
 nginx -v
+tcpdump --version
 getcap --help
-getcap -help
 dnf download --downloaddir=/tmp tcpdump
 ls -lh /tmp/tcpdump*.rpm
 sudo dnf install /tmp/tcpdump*.rpm
