@@ -1,0 +1,25 @@
+echo "Hello from Student: 255800" | sudo tee /data/mephi-web/index.html
+ls -l /data/mephi-web/index.html
+echo "Hello from Student: 255800" | sudo tee /data/mephi-web/index.html
+df -h /data/mephi-web
+exit
+echo "Hello from Student: 255800" > /data/mephi-web/index.html
+cat /data/mephi-web/index.html
+curl -I http://192.168.1.100
+curl http://192.168.1.100
+curl http://localhost
+exit
+curl http://localhost
+curl -I http://192.168.1.100
+curl http://localhost
+exit
+sudo -u mephi-admin tcpdump --help
+curl http://192.168.1.100
+shutdown
+sudo shutdown
+exit
+curl http://localhost
+journalctl -u nginx --since "5 minutes ago" > ~/nginx_recent_logs.txt
+systemctl status nginx
+sudo journalctl -u nginx --since "5 minutes ago" > /tmp/nginx_recent_logs.txt
+su admin
