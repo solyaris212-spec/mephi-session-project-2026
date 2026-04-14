@@ -18,7 +18,7 @@ tcpdump --version
 getcap --help
 dnf download --downloaddir=/tmp tcpdump
 ls -lh /tmp/tcpdump*.rpm
-sudo dnf install /tmp/tcpdump*.rpm
+sudo rpm -ivh /tmp/tcpdump*.rpm
 rpm -qa | grep tcpdump
 dnf list installed nginx tcpdump libcap-ng-utils
 rpm -qa | grep tcpdump
